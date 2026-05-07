@@ -2,8 +2,8 @@ import tkinter as Ventana
 from tkinter import messagebox
 
 class Formulario:
-    def __init__(self, root, controlador):
-        self.root = root
+    def __init__(self, controlador): 
+        self.root = Ventana.Tk() 
         self.controlador = controlador
         self.titulo = "¡ANALICEMOS TU NUMERO!"
         self.root.geometry("300x300")
@@ -14,6 +14,9 @@ class Formulario:
         self.campo_dato_numero.pack()
         
         Ventana.Button(self.root, text="Analizar", command=self.pedir_numero).pack()
+
+    def iniciar(self):
+        self.root.mainloop()
 
     def pedir_numero(self): 
         valor = self.campo_dato_numero.get()
