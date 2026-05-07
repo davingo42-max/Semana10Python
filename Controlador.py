@@ -1,16 +1,14 @@
-from Modelo import Numero
+from Numero import Numero
 
 class ControladorNumero:
+
     def __init__(self, vista_clase):
         self.obj_numero = Numero() 
         self.obj_vista = None      
 
     def tomar_numero(self, valor): 
-        try:
-            resultado = self.obj_numero.validar_numero(valor)
-            self.imprimir_numero(resultado)
-        except ValueError:
-            self.obj_vista.mostrar_error("Ingrese un número válido")
+        resultado = self.obj_numero.validar_numero(valor)
+        self.imprimir_numero(resultado)
 
     def imprimir_numero(self, mensaje):
         self.obj_vista.imprimir_mensaje(mensaje)

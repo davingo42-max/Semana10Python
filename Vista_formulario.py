@@ -1,4 +1,4 @@
-import tkinter as tk
+import tkinter as Ventana
 from tkinter import messagebox
 
 class Formulario:
@@ -9,11 +9,11 @@ class Formulario:
         self.root.geometry("300x300")
         self.root.title(self.titulo)
         
-        tk.Label(self.root, text="¿Cuál es su número?").pack()
-        self.campo_dato_numero = tk.Entry(self.root)
+        Ventana.Label(self.root, text="¿Cual es su número?").pack()
+        self.campo_dato_numero = Ventana.Entry(self.root)
         self.campo_dato_numero.pack()
         
-        tk.Button(self.root, text="Analizar", command=self.pedir_numero).pack()
+        Ventana.Button(self.root, text="Analizar", command=self.pedir_numero).pack()
 
     def pedir_numero(self): 
         valor = self.campo_dato_numero.get()
